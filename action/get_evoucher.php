@@ -67,10 +67,13 @@
                             <table>
                                 <tr>
                                     <td valign="top">
-                                        <a href="content.php?module=voucher&act=edit&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-info">Edit</a>
+                                        <a href="content.php?module=evoucher&act=edit&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-info">Edit</a>
+                                    </td>
+                                    <td valign="top">
+                                        <a href="content.php?module=evoucher&act=aktivasi&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-primary">Aktivasi</a>
                                     </td>
                                     <td>
-                                        <form method="post" action="action/delete_voucher.php?id="'.$row[id].'" id="itemhapus'.$row[id].'">
+                                        <form method="post" action="action/delete_evoucher.php?id="'.$row[id].'" id="itemhapus'.$row[id].'">
                                             <i class="fa fa-trash"></i><input type="submit" class="btn btn-sm btn-danger" value="Delete">
                                         </form>
                                         <script type="text/javascript">
