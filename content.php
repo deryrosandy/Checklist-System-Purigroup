@@ -19,5 +19,8 @@
 		if($_GET['module']=='voucher'){
 			include('module/' . $_GET['module'] . '/' . $_GET['module'] . '.php');
 		}
+		if($_GET['module']=='evoucher'){
+			include('module/' . $_GET['module'] . '/' . $_GET['module'] . '.php');
+		}
 	}
 ?>
