@@ -112,7 +112,7 @@
 				
 				<?php if(@$_GET['act']=='add'){ ?>
 				
-					<?php include('add-voucher.php'); ?>
+					<?php include('add-evoucher.php'); ?>
 				
 				<?php }elseif(@$_GET['act']=='category'){ ?>
 				
@@ -120,7 +120,7 @@
 					
 				<?php }elseif(@$_GET['act']=='history'){ ?>
 				
-					<?php include('history-voucher.php'); ?>
+					<?php include('history-evoucher.php'); ?>
 					
 				<?php }elseif(@$_GET['act']=='add-category'){ ?>
 				
@@ -132,7 +132,7 @@
 					
 				<?php }elseif(@$_GET['act']=='edit'){ ?>
 					
-					<?php include('edit-voucher.php'); ?>
+					<?php include('edit-evoucher.php'); ?>
 				
 				<?php }elseif(@$_GET['act']=='transaksi'){ ?>
 				
@@ -155,7 +155,7 @@
 							<div class="row">
 								<div class="col-lg-12">
 									<div class="col-button-colors pull-left">
-										<h1 style="padding-top:10px;" class="panel-title">List Voucher</h1>
+										<h1 style="padding-top:10px;" class="panel-title">List eVoucher</h1>
 									</div>
 									<div class="col-button-colors pull-right">
 										<?php if($_SESSION['user_type'] == 'markom'){ ?>
@@ -204,7 +204,7 @@
 						
 						<div class="panel-body">
 							<div class="table-responsive">
-								<!--<table id="list_voucher" class="table table-responsive table-hover table-striped" cellspacing="0" width="100%">-->
+								<!--<table id="list_evoucher" class="table table-responsive table-hover table-striped" cellspacing="0" width="100%">-->
 								<table id="list_voucher" class="display row-border nowrap table-striped responsive-utilities jambo_table" cellspacing="0" width="100%">
 									<thead>
 										<tr>
@@ -344,11 +344,11 @@
 		
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var table = $('#list_voucher').DataTable( {
+				var table = $('#list_evoucher').DataTable( {
 					"processing": true,
 					"serverSide": true,
 					"ajax": {
-						url: 'action/get_voucher.php',
+						url: 'action/get_evoucher.php',
 						type: 'POST',
                         error: function(){  // error handling
 							$(".employee-grid-error").html("");

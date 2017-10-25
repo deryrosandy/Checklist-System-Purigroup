@@ -262,9 +262,9 @@
     border-radius: 4px;
     width: initial;
 }
-td.dt-center {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
+table.dataTable td,
+table.dataTable td form {
+    vertical-align: middle;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

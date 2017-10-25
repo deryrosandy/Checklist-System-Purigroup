@@ -29,7 +29,7 @@
     //$sql = "SELECT voucher.code, voucher.barcode,voucher.nominal,voucher.voucher_category_id,voucher.active_date,voucher.expire_date,voucher.status,voucher_category.id,voucher_category.name categoryName";
     $sql = "SELECT voucher.id,voucher.code, voucher.barcode,voucher.nominal,voucher.voucher_category_id,voucher.active_date,voucher.expire_date,voucher.status";
     $sql.= " FROM voucher";
-    $sql.= " WHERE voucher_type='FISIK'";
+    $sql.= " WHERE voucher_type='ELEKTRIK'";
    // $sql.= " INNER JOIN voucher_category ON voucher.voucher_category_id=voucher_category.id;";
     //var_dump($sql); die();
     $query=mysqli_query($conn, $sql) or die("action/get_voucher.php: get voucher");
@@ -39,7 +39,7 @@
 
     $sql = "SELECT voucher.id,voucher.code, voucher.barcode,voucher.nominal,voucher.voucher_category_id,voucher.active_date,voucher.expire_date,voucher.status";
     $sql.= " FROM voucher";
-    $sql.= " WHERE voucher_type='FISIK'";
+    $sql.= " WHERE voucher_type='ELEKTRIK'";
     //$sql.= " INNER JOIN voucher_category ON voucher.voucher_category_id=voucher_category.id;";
    
     if( !empty($requestData['search']['value']) ) {   // if there is a search parameter, $requestData['search']['value'] contains search parameter
