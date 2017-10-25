@@ -205,7 +205,7 @@
 						<div class="panel-body">
 							<div class="table-responsive">
 								<!--<table id="list_evoucher" class="table table-responsive table-hover table-striped" cellspacing="0" width="100%">-->
-								<table id="list_voucher" class="display row-border nowrap table-striped responsive-utilities jambo_table" cellspacing="0" width="100%">
+								<table id="list_evoucher" class="display row-border nowrap table-striped responsive-utilities jambo_table" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 											<!--<th><input type="checkbox" name="select_all" value="1" id="select-all-row"></th>-->
