@@ -32,9 +32,19 @@ if (!empty($_POST) ) {
         global $connection ;//we use connection already opened
         $query = mysqli_query($connection, $sql) OR DIE ("Can't get Data from DB , check your SQL Query " );
         $datasql = array();
-        foreach ($query as $row ) {
-            $datasql[] = $row ;
-            $datasql[] = '<div class="btn-group">
+        foreach ($query as $row) {
+            $sub_array = array ();
+            $sub_array[] = $row['code'];
+            $sub_array[] = $row['barcode'];
+            $sub_array[] = $row['nominal'];
+            $sub_array[] = $row['active_date'];
+            $sub_array[] = $row['expire_date'];
+            $sub_array[] = $row['branch_id'];
+            $sub_array[] = $row['voucher_category_id'];
+            $sub_array[] = $row['status'];
+            
+            //$datasql[] = $row;
+            $sub_array[] = '<div class="btn-group">
                                 <button type="button" class="btn btn-danger btn-xs">Action</button>
                                 <button type="button" class="btn btn-danger dropdown-toggle btn-xs" data-toggle="dropdown">
                                 <span class="caret"></span>
@@ -46,6 +56,7 @@ if (!empty($_POST) ) {
                                 </ul>
                             </div>';
         }
+        $datasql =  $sub_array;
         return $datasql;
     }
 	//var_dump(intval($_POST["draw"])); die();
@@ -78,7 +89,6 @@ if (!empty($_POST) ) {
         /* SQL Query for search with limit and orderBy clauses*/
         $sql = sprintf("SELECT * FROM %s %s ORDER BY %s %s limit %d , %d ", MyTable , $where ,$orderBy, $orderType ,$start,$length  );
         $data = getData($sql);
-        var_dump($data); die();
     }
     /* END SEARCH */
     else {
