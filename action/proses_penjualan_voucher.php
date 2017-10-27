@@ -18,9 +18,9 @@
 		$voucher_id 	= $_POST['voucher_id'];
 		$branch_id 		= $_SESSION['branch_id'];
 		$users_id 		= $_SESSION['id'];
-		$active_date = date('Y-m-d H:i:s');
+		$active_date    = date('Y-m-d H:i:s');
 		
-		$expire_date = date('Y-m-d H:i:s', strtotime('+4 month'));
+		$expire_date = date('Y-m-d H:i:s', strtotime('+3 month'));
 		
 		$created_at = date('Y-m-d H:i:s');
 		
