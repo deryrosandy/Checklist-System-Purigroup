@@ -601,7 +601,7 @@
 					lengthChange: false,
 					'columnDefs': [
 						{
-							columns: [0,1,2,3,4,5,6,7,8],
+							columns: [0,1,2,3,4,5],
 							visible: false,
 						},
 						{
@@ -621,7 +621,7 @@
 						pageSize: 'A4',
 						title: 'Daftar Voucher',
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6,7,8]
+							columns: [0,1,2,3,4,5]
 						},
 						customize: function ( win ) {
 							$(win.document.body)
@@ -651,7 +651,7 @@
 						text: 'Export selected',
 						footer: true,
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6,7,8],
+							columns: [0,1,2,3,4,5],
 							modifier: {
                                     selected: true
                                 },
@@ -665,7 +665,7 @@
 						extend: 'excel',
 						footer: false,
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6,7,8],
+							columns: [0,1,2,3,4,5],
 						},
 						pageSize: 'A4',
 						title: 'Daftar Voucher',
