@@ -8,7 +8,7 @@
 ?>
 
 <div class="container-fluid-md">
-	<form id="requestAddForm" action="action/update_voucher.php" name="form-tambah-pengguna"  enctype='multipart/form-data' method="POST" class="form-horizontal form-bordered" role="form">
+	<form id="requestAddForm" action="action/update_evoucher.php" name="form-tambah-pengguna"  enctype='multipart/form-data' method="POST" class="form-horizontal form-bordered" role="form">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="row">
@@ -90,7 +90,7 @@
 					<div class="controls col-sm-6 col-sm-offset-2">
 						<input type="hidden" name="id" value="<?php echo $voucher['id']; ?>"/>
 						<button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;&nbsp;
-						<a href="content.php?module=voucher" class="btn btn-danger">Cancel</a>
+						<a href="content.php?module=evoucher" class="btn btn-danger">Cancel</a>
 					</div>
 				</div>
 			</div>

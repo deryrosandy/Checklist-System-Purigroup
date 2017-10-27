@@ -136,15 +136,15 @@
 				
 				<?php }elseif(@$_GET['act']=='transaksi'){ ?>
 				
-					<?php include('transaksi.php'); ?>
+					<?php include('transaksi_evoucher.php'); ?>
 				
 				<?php }elseif(@$_GET['act']=='penjualan'){ ?>
 					
-					<?php include('penjualan.php'); ?>
+					<?php include('penjualan_evoucher.php'); ?>
 					
-				<?php }elseif(@$_GET['act']=='voucher_ajax'){ ?>
+				<?php }elseif(@$_GET['act']=='aktivasi'){ ?>
 					
-					<?php include('voucher_ajax.php'); ?>
+					<?php include('aktivasi_evoucher.php'); ?>
 				
 				<?php }else{ ?>
 				
@@ -364,7 +364,7 @@
 					"lengthChange": false,
 					"columnDefs": [
 						{
-							columns: [0,1,2,3,4,5,6],
+							columns: [0,1,2,3,4,5],
 							visible: false,
 						},
 						{
@@ -384,7 +384,7 @@
 						pageSize: 'A4',
 						title: 'Daftar Voucher',
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6]
+							columns: [0,1,2,3,4,5]
 						},
 						customize: function ( win ) {
 							$(win.document.body)
@@ -414,7 +414,7 @@
 						text: 'Export selected',
 						footer: true,
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6],
+							columns: [0,1,2,3,4,5],
 							modifier: {
                                     selected: true
                                 },
@@ -428,7 +428,7 @@
 						extend: 'excel',
 						footer: false,
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6],
+							columns: [0,1,2,3,4,5],
 						},
 						pageSize: 'A4',
 						title: 'Daftar Voucher',
@@ -437,7 +437,7 @@
 						extend: 'colvis',
 						footer: false,
 						exportOptions: {
-							columns: [0,1,2,3,4,5,6],
+							columns: [0,1,2,3,4,5],
 						},
 						pageSize: 'A4',
 						title: 'Daftar Voucher',
