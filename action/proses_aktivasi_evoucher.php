@@ -60,7 +60,7 @@
                                         type: 'success'
                                     },
                                     function () {
-                                        window.location.href = '../content.php?module=evoucher&act=aktivasi&id=$voucher_id';
+                                        window.location.href = '../content.php?module=evoucher&act=aktivasi&page=history-aktivasi';
                                     });
                                 </script>";
                         exit();	

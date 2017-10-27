@@ -8,10 +8,10 @@ require_once('class/BCGDrawing.php');
 require_once('class/BCGcode39.barcode.php');
 
 // Loading Font
-$font = new BCGFontFile('./font/Arial.ttf', 18);
+$font = new BCGFontFile('./font/Arial.ttf', 12);
 
 // Don't forget to sanitize user inputs
-$text = isset($_GET['text']) ? $_GET['text'] : 'HELLO';
+$text = isset($_GET['text']) ? $_GET['text'] : '0001 0001 10000';
 
 // The arguments are R, G, B for color.
 $color_black = new BCGColor(0, 0, 0);
@@ -20,8 +20,8 @@ $color_white = new BCGColor(255, 255, 255);
 $drawException = null;
 try {
 	$code = new BCGcode39();
-	$code->setScale(2); // Resolution
-	$code->setThickness(30); // Thickness
+	$code->setScale(1); // Resolution
+	$code->setThickness(40); // Thickness
 	$code->setForegroundColor($color_black); // Color of bars
 	$code->setBackgroundColor($color_white); // Color of spaces
 	$code->setFont($font); // Font (or 0)
@@ -42,9 +42,10 @@ if($drawException) {
 }
 
 // Header that says it is an image (remove it if you save the barcode to a file)
-header('Content-Type: image/png');
-header('Content-Disposition: inline; filename="barcode.png"');
+//header('Content-Type: image/png');
+//header('Content-Disposition: inline; filename="barcode.png"');
 
 // Draw (or save) the image into PNG format.
-$drawing->finish(BCGDrawing::IMG_FORMAT_PNG);
+$drawing->setFilename('../barcode/'. 'barcode_' . $barcode . '.png');
+//$drawing->finish(BCGDrawing::IMG_FORMAT_PNG);
 ?>

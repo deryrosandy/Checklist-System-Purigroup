@@ -82,7 +82,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="content.php?module=evoucher" title="Data Voucher Elektrik">
+					<a href="content.php?module=evoucher&page=list" title="Data Voucher Elektrik">
 						<i class="fa fa-lg fa-fw fa-file-text-o"></i> Data Voucher Elektrik
 					</a>
 				</li>

@@ -264,7 +264,14 @@
 }
 table.dataTable td,
 table.dataTable td form {
-    vertical-align: middle;
-    margin-top: 5px;
     margin-bottom: 5px;
+}
+.label {
+    font-weight: 600;
+    padding: 4px 8px;
+    line-height: 18px;
+    white-space: nowrap;
+    display: inline-block;
+    min-width: 80px;
+    margin-bottom: 0;
 }

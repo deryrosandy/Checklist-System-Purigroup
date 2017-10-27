@@ -17,6 +17,23 @@ function status($user_type) {
 	return($result);
 }
 
+function status_voucher($status) {
+	switch ($status){
+		case "ACTIVE":
+			return "success";
+			break;
+		case "NON ACTIVE":
+			return "danger";
+			break;
+		case "EXPIRE":
+			return "warning";
+			break;
+		case "TERPAKAI":
+			return "info";
+			break;
+	}
+}
+
 function color_req_status($request_id) {
 	switch ($request_id){
 		case "Approve":
@@ -549,7 +566,6 @@ function sendMail($customer_name, $customer_email, $barcode){
           <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
 
             <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
             <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
 
               <!-- START MAIN CONTENT AREA -->
@@ -567,7 +583,7 @@ function sendMail($customer_name, $customer_email, $barcode){
                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                   <tbody>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="//110.50.85.26:82/checklist/assets/generate_voucher/' . $barcode . '.jpg" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;" download>Download EVOUCHER</a> </td>
+                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="http://110.50.85.26:82/checklist/assets/generate_voucher/' . $barcode . '.jpg" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;" download>Download EVOUCHER</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>

@@ -90,7 +90,7 @@
 					<div class="controls col-sm-6 col-sm-offset-2">
 						<input type="hidden" name="id" value="<?php echo $voucher['id']; ?>"/>
 						<button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;&nbsp;
-						<a href="content.php?module=evoucher" class="btn btn-danger">Cancel</a>
+						<a href="content.php?module=evoucher&page=list" class="btn btn-danger">Cancel</a>
 					</div>
 				</div>
 			</div>

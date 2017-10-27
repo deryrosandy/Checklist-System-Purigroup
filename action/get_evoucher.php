@@ -1,4 +1,8 @@
 <?php
+
+    include '../core/init.php';
+    include '../core/helper/myHelper.php';
+        
     /* Database connection start */
     $servername = "localhost";
     $username = "root";
@@ -60,21 +64,21 @@
         $nestedData[] = $row["code"];
         $nestedData[] = $row["barcode"];
         $nestedData[] = $row["nominal"];
-        $nestedData[] = $row["active_date"];
-        $nestedData[] = $row["expire_date"];
-        $nestedData[] = $row["status"];
+        $nestedData[] = tgl_indo2($row["active_date"]);
+        $nestedData[] = tgl_indo2($row["expire_date"]);
+        $nestedData[] = '<label class="label label-xs label-' . status_voucher($row["status"]) . '">' . ucfirst($row["status"]) . '</label>';
         $nestedData[] = '<td class="btn-group btn-group-box">
                             <table>
                                 <tr>
                                     <td valign="top">
-                                        <a href="content.php?module=evoucher&act=aktivasi&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-primary">Aktivasi</a>
+                                        <a href="content.php?module=evoucher&act=aktivasi&page=list&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-primary" title="Detail"><i class="fa fa-file-text-o"></i></a>
                                     </td>
                                     <td valign="top">
-                                        <a href="content.php?module=evoucher&act=edit&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-info">Edit</a>
+                                        <a href="content.php?module=evoucher&act=edit&id='.$row[id].'" style="margin-right:3px;" class="btn btn-sm btn-info title="Edit"><i class="fa fa-pencil-square-o"></i></a>
                                     </td>
                                     <td>
                                         <form method="post" action="action/delete_evoucher.php?id="'.$row[id].'" id="itemhapus'.$row[id].'">
-                                            <i class="fa fa-trash"></i><input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                                            <i class="fa fa-trash"></i><input type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Delete" value="&#xf014">
                                         </form>
                                         <script type="text/javascript">
                                             document.querySelector("#itemhapus'.$row[id].'").addEventListener("submit", function(e) {
